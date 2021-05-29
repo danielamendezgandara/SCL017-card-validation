@@ -1,0 +1,259 @@
+/*@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+  }
+
+body{
+    background: #05365e;
+    margin: 0 10px;
+  }
+
+/*header{
+  text-align:justify;
+  font-size: 40px ;
+  color: #f8f8f8;
+  top: 60%;
+
+}*/
+header{
+  display: flex;
+  background-color: #E7EBDA;
+  font-family: 'Lato', sans-serif;
+  color: #05365e;
+  width:100%;
+}
+
+header h1{
+  text-align: left;
+  width:30%;
+  display:inline-block;
+}
+header nav{
+  text-align: right;
+  display:inline-block;
+  font-family: 'Lato', sans-serif;
+  width:60%;
+}
+
+header ul{
+  display: inline-block;
+  list-style-type: none;
+  margin: 0.5em auto;
+  text-align: center;
+}
+
+header ul li{
+  display: inline-block;
+}
+
+header ul li a{
+  text-decoration: none;
+  border: solid;
+  border-color: #7D8471;
+  border-radius: 50px;
+  background-color: #7D8471;
+  color: white;
+  padding: 0.3em;
+}
+
+header ul li a:hover{
+  background-color: #B8B799;
+  border-color: #B8B799;
+}
+
+header ul li a:active{
+  padding: 0.2em;
+}
+aside{
+  width: 10%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+footer{
+  font-size: 20 px;
+  color: #f8f8f8;
+  text-align: right;
+}
+
+.subscription{
+  margin: 50px auto 30px;
+  position: relative;
+  padding-top: 300px;
+  width: 550px;
+  height: 480px;
+  background: rgb(245, 246, 248);
+  border-radius: 15px;
+  padding: 30px 60px 100px;
+  box-shadow: 0 10px 40px hsla(0, 0, 0, .1);
+}
+
+.subscription h2{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: #0d3c61;
+    padding: 3px 2px 25px;
+  }
+
+  .subscription h3{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #0d3c61;
+  }
+
+.form .label{
+    display: block;
+    color: #555555;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  
+  .input{
+    display: block;
+    width: 210px;
+    height: 30px;
+    padding-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    font-size: 17px;
+    font-family: 'Source Code Pro';
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    transition: background 0.5s;
+  }
+.input:focus{
+      outline-width: 0;
+      background: rgba(31,134,252, 0.15);
+      transition: background 0.5s;
+    }
+
+.input-date{
+    display: block;
+    width: 80px;
+    height: 30px;
+    padding-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 1px 10px 1px 1px;
+    font-size: 13px;
+    font-family: 'Source Code Pro';
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    transition: background 0.5s;
+}
+
+.input-date:focus{
+  outline-width: 0;
+  background: rgba(31,134,252, 0.15);
+  transition: background 0.5s;
+}
+  .card-grp{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-item{
+    width: 50%;
+  }
+  .expire-space{
+    display: flex;
+    justify-content:flex-start;
+  }
+
+  .space{
+    margin-bottom: 50px;
+  }
+
+  .btn{
+    margin-top: 0px;
+    padding-bottom: 30px;
+    background: #062138;
+    padding: 30Spx;
+    text-align: center;
+    color: #f8f8f8;
+    border-radius: 5px;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    left:40%;
+    top: 87%;
+  }
+
+  @media screen and (max-width: 420px){
+    .card-grp{
+      flex-direction: column;
+    }
+    .card-item{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .btn{
+      margin-top: 10px;
+    }
+  }
+.pop_up_window{
+    display: none;
+    background-color:rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  position: absolute;
+  left: 26%;
+  top: 35%;
+}
+
+#select{
+  font-family: 'Source Code Pro';
+  display: none;
+  background:  rgba(0,0,0,0.05);
+  border: none;
+  outline: none;
+
+}
+#select:focus{ outline: none;}
+            
+#span{
+    font-family: 'Source Code Pro';
+    color: #444880;
+    margin: 0 2px;
+}
+
+.input.card-grp{
+  width: 70px;
+  height: 30px;
+
+}

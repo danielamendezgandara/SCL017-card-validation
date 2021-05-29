@@ -4,11 +4,94 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
   </head>
   <body>
-    <header></header>
     <main></main>
-    <footer></footer>
+    <div class="wrapper">
+      <header>
+        <h1>Logia</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Acerca de </a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+      <div class="subscription">
+          <h2>Confirmar subscripción</h2> 
+         <form class="form" id="check" method="post">
+              <div id="form"   class="cardNumber space">
+                   <label class="label">Nombre en la tarjeta</label>
+                    <input type="text" id="name" class="input" name="name" placeholder="Coding Market" required>
+                    <i class="fas fa-user"></i>
+              </div>
+              <div class="cardNumber space">
+                   <label class="label">Número de tarjeta</label>
+                   <input type="text" id= "number" class="input" name="cardNumber" maxlength="16" data-mask="0000 0000 0000 0000"  placeholder="0000-0000-0000-0000" autocomplete="off" required>
+              </div>
+               <div class="card-grp space">
+                    <div class="card-item">
+                        <label class="label">Expira</label>
+                         <div class="expire-space">
+                        <!-- <input type="text" id="expire" class="input" name="expiry_date" placeholder="00/00" required>-->
+                         <select id="expire-month"  class="input-date" required>
+                                 <option>mm</option>
+                                 <option value="1">01</option>
+                                 <option value="2">02</option>
+                                 <option value="3">03</option>
+                                 <option value="4">04</option>
+                                 <option value="5">05</option>
+                                 <option value="6">06</option>
+                                 <option value="7">07</option>
+                                 <option value="8">08</option>
+                                 <option value="9">10</option>
+                                 <option value="11">11</option>
+                                 <option value="12">12</option>
+                                 </select>
+                       <select id="expire-year" class="input-date" required>
+                           <option>aaaa</option>
+                           <option value="2016">2016</option>
+                           <option value="2017">2017</option>
+                           <option value="2018">2018</option>
+                           <option value="2019">2019</option>
+                           <option value="2020">2020</option>
+                           <option value="2021">2021</option>
+                           <option value="2022">2022</option>
+                           <option value="2023">2023</option>
+                           <option value="2024">2024</option>
+                           <option value="2025">2025</option>
+                           <option value="2026">2026</option>
+                           <option value="2027">2027</option>
+                           <option value="2028">2028</option>
+                           <option value="2029">2029</option>
+                           <option value="2030">2030</option>
+                       </select>
+                    </div>
+                 </div>
+                    <div class="card_item">
+                         <label class="label">CVC</label>
+                         <input type="text" id="cvc" class="input" name="cvc" maxlength="3" placeholder="000" required>
+                    </div>
+               </div>
+               <div >
+                     <input type="submit" id="send" class="btn">
+               </div>
+        </form>
+        <div class="pop_up_window" id="pop_up_window">
+            <div class="container">
+              <p id="message">Su tarjeta no es válida</p>
+              <button id="close">Cerrar</button> 
+            </div>    
+      </div>
+      </div>
+      <footer>
+        <p>&#169; 2021 <a href="#">Open Class</a></p>
+      </footer>
+ </div>
     <script src="index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
   </body>
 </html>
