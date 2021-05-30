@@ -1,5 +1,31 @@
 # Tarjeta de crédito válida
 
+## 1. Sobre el proyecto
+
+Logia es un sitio web que imparte cursos en línea de diferentes temáticas .Las usuarias o usuarios son personas que desean aprender sobre una temática en particular disponible en el sitio. 
+
+Para confirmar la subcripción a un curso deben hacer click en la imagen alusiva a este y lo dirigirá a una página en donde deberá ingresar los datos de la tarjeta de crédito. Al enviar los datos se evaluará si la tarjeta es válida o no , si es válida se confirmará la subscripción al curso.
+
+## 2. Imagen final del proyecto
+
+## 3. Investigación UX
+
+3.1 Las usuarias son en general personas mayores de edad que desean aprender una temática de su interés que ofrezca la plataforma.
+3.2 El producto ofrecido satisface la necesidad de aprender de la usuaria y utilizar ese conocimiento con la opción de desarrollar un proyecto al final del curso.
+3.3 Feedback recibido de prototipos: Los prototipos iniciales no se podían explicar por sí solos,por lo que hubo que simplificar el diseño para que fuera entendible.Luego se diseñó en Figma un prototipo el cual al adaptarlo en formato de página web las proporciones de cada elemento eran excesivamente grandes.Este último se modificó hasta hacerlo más entendible y práctico.
+
+## 4. Objetivos alcanzados en el desarrollo de este proyecto
+
+* Manipulación dinámica del DOM mediante Javascript
+* Uso de ciclos y condicionales de Javascript
+
+## 5. Objetivos por alcanzar en los próximos proyectos
+
+* Definir el propósito de la aplicación desde un comienzo
+* Diseñar la aplicación pensando y entendiendo al usuario
+* Aplicar el feedback entregado e iterar más
+* Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
