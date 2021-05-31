@@ -14,21 +14,20 @@ let cont = 0;
 
 name.onkeypress = function (e) {
 	let key = e.keyCode || e.which;
-	let tecla = String.fromCharCode(key).toLowerCase();
-	let letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-	//let  especiales = "8-37-39-46";
-	let nueva = "";
-	let especiales = nueva >= 33 && nueva <= 47;
+	let computerKey = String.fromCharCode(key).toLowerCase();
+	let letters= " áéíóúabcdefghijklmnñopqrstuvwxyz";
+	let character = "";
+	let especials = character >= 33 && character <= 47;
 
-	let tecla_especial = false;
-	for (var i in especiales) {
-		if (key == especiales[i]) {
-			tecla_especial = true;
+	let especialKey = false;
+	for (let i in especials) {
+		if (key == especials[i]) {
+			especialKey = true;
 			break;
 		}
 	}
 
-	if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+	if (letters.indexOf(computerKey) == -1 && !especialKey) {
 		return false;
 	}
 }
@@ -36,7 +35,6 @@ name.onkeypress = function (e) {
 numberCard.onkeypress = function (evt) {
 	var charCode = (evt.which) ? evt.which : evt.keyCode;
 	if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-		location.reload();
 		return false;
 	} else {
 		numberCard.onkeyup = function (e) {
@@ -54,9 +52,11 @@ function validation() {
 	let text = validator.isValid(cardNumber);
 	if (text == false) {
 		pop_up_window.style.display = "block";
+		numberCard.value="";	
 	}else{
     message.innerHTML="Su tarjeta es válida"
     pop_up_window.style.display= "block";
+	numberCard.value="";
   }
 }
 
@@ -80,5 +80,4 @@ close.addEventListener("click", cerrar);
 
 function cerrar() {
 	pop_up_window.style.display = "none";
-    location.reload();
 }
