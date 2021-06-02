@@ -14,6 +14,8 @@ const buyProduct2=document.getElementById("buy2");
 const buyDetails=document.getElementById("buydetails");
 const wrapper=document.getElementById("wrapper");
 const cancel=document.getElementById("cancel");
+const quantity=document.getElementById("value");
+const total=document.getElementById("total");
 let shelf;
 let state = "";
 let cont = 0;
@@ -22,6 +24,7 @@ let cont = 0;
 wrapper.style.display="none";
 aboutPage.style.display="block";
 buyDetails.style.display="none";
+
 
 buyProduct1.addEventListener("click",buy);
 buyProduct2.addEventListener("click",detailsBuy);
@@ -40,6 +43,12 @@ function detailsBuy(){
 function cancelled(){
 	wrapper.style.display="none";
 	aboutPage.style.display="block";
+}
+
+quantity.onchange = function () {
+	let sum;
+	sum=(quantity.value)*1000;
+	total.innerHTML=sum;
 }
 
 name.onkeypress = function (e) {
