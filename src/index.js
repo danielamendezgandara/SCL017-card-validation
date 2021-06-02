@@ -11,6 +11,7 @@ const numberCard = document.getElementById("number");
 const aboutPage=document.getElementById("aboutPage");
 const buyProduct1=document.getElementById("buy1");
 const buyProduct2=document.getElementById("buy2");
+const buyDetails=document.getElementById("buydetails");
 const wrapper=document.getElementById("wrapper");
 const cancel=document.getElementById("cancel");
 let shelf;
@@ -20,14 +21,20 @@ let cont = 0;
 
 wrapper.style.display="none";
 aboutPage.style.display="block";
+buyDetails.style.display="none";
 
 buyProduct1.addEventListener("click",buy);
-buyProduct2.addEventListener("click",buy);
+buyProduct2.addEventListener("click",detailsBuy);
 cancel.addEventListener("click",cancelled);
 
 function buy(){
 	wrapper.style.display="block";
 	aboutPage.style.display="none";
+}
+
+function detailsBuy(){
+  aboutPage.style.display="none";
+  buyDetails.style.display="block";
 }
 
 function cancelled(){
