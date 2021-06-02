@@ -222,7 +222,9 @@ footer{
     margin-top: 60px;
     margin-bottom: 10px;
   }
-
+  .details{
+    display: inline;
+  }
   @media screen and (max-width:420px){
     .card-grp{
       flex-direction: column;
