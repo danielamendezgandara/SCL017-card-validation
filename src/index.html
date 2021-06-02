@@ -3,40 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main></main>
-    <div class="wrapper">
-      <header>
-        <h1>Logia</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Acerca de </a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Perfil</a></li>
-            </ul>
-        </nav>
-    </header>
-      <div class="subscription">
-          <h2>Confirmar subscripción</h2> 
+  <body> 
+    <div id= "wrapper" class="wrapper">
+      <header class="logopay">
+        <nav class="link">
+      <ul>
+          <li>INICIO</li>
+          <li>PRODUCTOS</li>
+          <li>NOVEDADES</li>
+          <li>OFERTAS</li>
+          <li>ACERCA DE  NOSOTRAS</li>
+      </ul>
+  </nav>
+        <img class="logo" src="../img/logo.png" alt="logo" width="12%">
+      </header>
+      <div id= "pay" class="subscription" >
+          <h2>Información de pago</h2> 
          <form class="form" id="check" method="post">
-              <div id="form"   class="cardNumber space">
-                   <label class="label">Nombre en la tarjeta</label>
-                    <input type="text" id="name" class="input" name="name" required>
+              <div id="form"   class="cardNumber space icon-relative">
+                   <label class="label">NOMBRE EN LA TARJETA</label>
+                    <input type="text" id="name" class="input" name="name"  required>
+                    <i class="fas fa-user"></i>
               </div>
-              <div class="cardNumber space">
-                   <label class="label">Número de tarjeta</label>
+              <div class="cardNumber space icon-relative">
+                   <label class="label">NÚMERO DE LA TARJETA</label>
                    <input type="text" id= "number" class="input" name="cardNumber" maxlength="16" placeholder="0000-0000-0000-0000" autocomplete="off" required>
+                   <i class="far fa-credit-card"></i>
               </div>
                <div class="card-grp space">
                     <div class="card-item">
-                        <label class="label">Expira</label>
+                        <label class="label">EXPIRA</label>
                          <div class="expire-space">
-                        <!-- <input type="text" id="expire" class="input" name="expiry_date" placeholder="00/00" required>-->
                          <select id="expire-month"  class="input-date" required>
-                                 <option>mm</option>
+                                 <option>00</option>
                                  <option value="1">01</option>
                                  <option value="2">02</option>
                                  <option value="3">03</option>
@@ -50,32 +52,34 @@
                                  <option value="12">12</option>
                                  </select>
                        <select id="expire-year" class="input-date" required>
-                           <option>aaaa</option>
-                           <option value="2016">2016</option>
-                           <option value="2017">2017</option>
-                           <option value="2018">2018</option>
-                           <option value="2019">2019</option>
-                           <option value="2020">2020</option>
-                           <option value="2021">2021</option>
-                           <option value="2022">2022</option>
-                           <option value="2023">2023</option>
-                           <option value="2024">2024</option>
-                           <option value="2025">2025</option>
-                           <option value="2026">2026</option>
-                           <option value="2027">2027</option>
-                           <option value="2028">2028</option>
-                           <option value="2029">2029</option>
-                           <option value="2030">2030</option>
+                           <option>00</option>
+                           <option value="2016">16</option>
+                           <option value="2017">17</option>
+                           <option value="2018">18</option>
+                           <option value="2019">19</option>
+                           <option value="2020">20</option>
+                           <option value="2021">21</option>
+                           <option value="2022">22</option>
+                           <option value="2023">23</option>
+                           <option value="2024">24</option>
+                           <option value="2025">25</option>
+                           <option value="2026">26</option>
+                           <option value="2027">27</option>
+                           <option value="2028">28</option>
+                           <option value="2029">29</option>
+                           <option value="2030">30</option>
                        </select>
                     </div>
                  </div>
-                    <div class="card_item">
+                    <div class="card_item icon-relative">
                          <label class="label">CVC</label>
                          <input type="text" id="cvc" class="input" name="cvc" maxlength="3" placeholder="000" required>
+                         <i class="fas fa-lock"></i>
                     </div>
                </div>
-               <div >
-                     <input type="submit" id="send" class="btn">
+               <div class="button" >
+                     <input type="submit" id="send" class="btn" value="ENVIAR"> 
+                     <button id="cancel"class="btn">CANCELAR</button> 
                </div>
         </form>
         <div class="pop_up_window" id="pop_up_window">
@@ -86,9 +90,83 @@
       </div>
       </div>
       <footer>
-        <p>&#169; 2021 <a href="#">Logia</a></p>
+        <p>&#169; 2021 <a href="#"  style="text-decoration:none"><br>KawaiiPaper</a></p>
       </footer>
  </div>
+ <div id="aboutPage" class="about">
+  <header class="header">
+    <nav class="link">
+      <ul>
+          <li>INICIO</li>
+          <li>PRODUCTOS</li>
+          <li>NOVEDADES</li>
+          <li>OFERTAS</li>
+          <li>ACERCA DE  NOSOTRAS</li>
+      </ul>
+  </nav>
+    <img class="logo" src="../img/logo.png" alt="logo" width="30%">
+  </header>
+  <div >
+     <h3 class="title">Lápices</h3>
+     <div class="photo">
+      <img class= "photoGalery" src="../img/pencilpony.jpeg" alt="logo">
+      <br />
+      Marte, apodado a veces como el Planeta Rojo <br>
+      <a  id="buy1"  style="text-decoration:none" href="#">compra</a>
+     </div>
+     <div class="photo">
+      <img class= "photoGalery" src="../img/pencils.jpeg" alt="logo">
+      <br />
+       Marte, apodado a veces como el Planeta Rojo <br>
+       <a  id="buy2"  style="text-decoration:none" href="#">compra</a>
+     </div>
+     <div class="photo">
+      <img class= "photoGalery" src="../img/bearpencil.jpeg" alt="logo">
+      <br />
+       Marte, apodado a veces como el Planeta Rojo<br>
+       <a  id="buy3"  style="text-decoration:none" href="#">compra</a>
+     </div>
+</div>
+<div>
+  <h3 class="title-two">Accesorios</h3>
+  <div class="photo">
+    <img class= "photoGalery" src="../img/pencilcase.jpeg" alt="logo">
+    <br />
+       Marte, apodado a veces como el Planeta Rojo
+  </div>
+  <div class="photo">
+    <img class= "photoGalery" src="../img/eraserpopcorn.jpeg" alt="logo">
+    <br />
+       Marte, apodado a veces como el Planeta Rojo
+  </div>
+  <div class="photo">
+    <img class= "photoGalery" src="../img/glue.jpeg" alt="logo">
+    <br />
+       Marte, apodado a veces como el Planeta Rojo
+  </div>
+</div>
+<div>
+  <h3 class="title-two">Cuadernos y libretas</h3>
+  <div class="photo">
+    <img class= "photoGalery" src="../img/notebook.jpg" alt="logo">
+    <br />
+       Marte, apodado a veces como el Planeta Rojo
+  </div>
+  <div class="photo">
+    <img class= "photoGalery" src="../img/planner.png" alt="logo">
+    <br />
+       Marte, apodado a veces como el Planeta Rojo
+  </div>
+ <div class="photo">
+  <img class= "photoGalery" src="../img/dollsdiary.jpg" alt="logo">
+  <br />
+       Marte, apodado a veces como el Planeta Rojo
+ </div>
+</div>
+</div>
+<div class="buydetails">
+  
+</div>
     <script src="index.js" type="module"></script>
   </body>
 </html>

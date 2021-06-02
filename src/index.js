@@ -1,6 +1,6 @@
 import validator from './validator.js';
 
-const pop_up_window = document.getElementById("pop_up_window");
+const popUpWindow = document.getElementById("pop_up_window");
 const message=document.getElementById("message");
 const close = document.getElementById("close");
 const send = document.getElementById("send");
@@ -8,9 +8,32 @@ const check = document.getElementById("check");
 const name = document.getElementById("name");
 const cvc=document.getElementById("cvc");
 const numberCard = document.getElementById("number");
+const aboutPage=document.getElementById("aboutPage");
+const buyProduct1=document.getElementById("buy1");
+const buyProduct2=document.getElementById("buy2");
+const wrapper=document.getElementById("wrapper");
+const cancel=document.getElementById("cancel");
 let shelf;
 let state = "";
 let cont = 0;
+
+
+wrapper.style.display="none";
+aboutPage.style.display="block";
+
+buyProduct1.addEventListener("click",buy);
+buyProduct2.addEventListener("click",buy);
+cancel.addEventListener("click",cancelled);
+
+function buy(){
+	wrapper.style.display="block";
+	aboutPage.style.display="none";
+}
+
+function cancelled(){
+	wrapper.style.display="none";
+	aboutPage.style.display="block";
+}
 
 name.onkeypress = function (e) {
 	let key = e.keyCode || e.which;
@@ -51,12 +74,14 @@ function validation() {
 	let cardNumber = state;
 	let text = validator.isValid(cardNumber);
 	if (text == false) {
-		pop_up_window.style.display = "block";
-		numberCard.value="";	
+		popUpWindow.style.display = "block";
+		numberCard.value ="";
+		state = "";	
 	}else{
     message.innerHTML="Su tarjeta es válida"
-    pop_up_window.style.display= "block";
-	numberCard.value="";
+    popUpWindow.style.display= "block";
+	numberCard.value = "";
+	state = "";
   }
 }
 
@@ -76,8 +101,13 @@ send.onclick = function () {
 	}
 }
 
-close.addEventListener("click", cerrar);
+close.addEventListener("click", closeWindow);
 
-function cerrar() {
-	pop_up_window.style.display = "none";
+function closeWindow() {
+	popUpWindow.style.display = "none";
+	cvc.value = "";
+	state = "";
+	
+
 }
+
