@@ -16,6 +16,8 @@ const wrapper=document.getElementById("wrapper");
 const cancel=document.getElementById("cancel");
 const quantity=document.getElementById("value");
 const total=document.getElementById("total");
+const follow = document.getElementById("continue");
+const init = document.getElementById("init");
 let shelf;
 let state = "";
 let cont = 0;
@@ -26,13 +28,16 @@ aboutPage.style.display="block";
 buyDetails.style.display="none";
 
 
-buyProduct1.addEventListener("click",buy);
-buyProduct2.addEventListener("click",detailsBuy);
+buyProduct2.addEventListener("click",buy);
+buyProduct1.addEventListener("click",detailsBuy);
 cancel.addEventListener("click",cancelled);
+follow.addEventListener("click",buy);
+init.addEventListener("click",begin);
 
 function buy(){
 	wrapper.style.display="block";
 	aboutPage.style.display="none";
+	buyDetails.style.display="none";
 }
 
 function detailsBuy(){
@@ -48,7 +53,12 @@ function cancelled(){
 quantity.onchange = function () {
 	let sum;
 	sum=(quantity.value)*1000;
-	total.innerHTML=sum;
+	total.innerHTML="$" + sum;
+}
+
+function begin(){
+	aboutPage.style.display="block";
+	buyDetails.style.display="none";
 }
 
 name.onkeypress = function (e) {
@@ -94,7 +104,7 @@ function validation() {
 		numberCard.value ="";
 		state = "";	
 	}else{
-    message.innerHTML="Su tarjeta es válida"
+    message.innerHTML="Su tarjeta es válida. Puede continuar con su compra."
     popUpWindow.style.display= "block";
 	numberCard.value = "";
 	state = "";

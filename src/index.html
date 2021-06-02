@@ -84,8 +84,8 @@
         </form>
         <div class="pop_up_window" id="pop_up_window">
             <div class="container">
-              <p id="message">Su tarjeta no es válida</p>
-              <button id="close">Cerrar</button> 
+              <p id="message">Su tarjeta no es válida.Vuelva a intentarlo o cancele su compra.</p><br>
+              <button id="close" class="bTn">Cerrar</button> 
             </div>    
       </div>
       </div>
@@ -109,22 +109,25 @@
   <div >
      <h3 class="title">Lápices</h3>
      <div class="photo">
-      <img class= "photoGalery" src="../img/pencilpony.jpeg" alt="logo">
-      <br />
-      Marte, apodado a veces como el Planeta Rojo <br>
-      <a  id="buy1"  style="text-decoration:none" href="#">compra</a>
-     </div>
-     <div class="photo">
       <img class= "photoGalery" src="../img/pencils.jpeg" alt="logo">
       <br />
-       Marte, apodado a veces como el Planeta Rojo <br>
-       <a  id="buy2"  style="text-decoration:none" href="#">compra</a>
+      Lápiz Tinta Gel Multicolor Palta<br>
+      <p>$1000</p>
+      <a  id="buy1"  style="text-decoration:none" href="#">COMPRAR</a>
+     </div>
+     <div class="photo">
+      <img class= "photoGalery" src="../img/pencilpony.jpeg" alt="logo">
+      <br />
+      Lápiz Portaminas Unicornio <br> 
+      <p>$1500</p>
+       <a  id="buy2"  style="text-decoration:none" href="#">COMPRAR</a>
      </div>
      <div class="photo">
       <img class= "photoGalery" src="../img/bearpencil.jpeg" alt="logo">
       <br />
-       Marte, apodado a veces como el Planeta Rojo<br>
-       <a  id="buy3"  style="text-decoration:none" href="#">compra</a>
+      Lápiz Tinta Gel Negro Osito<br>
+      <p>$600</p>
+       <a  id="buy3"  style="text-decoration:none" href="#">COMPRAR</a>
      </div>
 </div>
 <div>
@@ -132,17 +135,20 @@
   <div class="photo">
     <img class= "photoGalery" src="../img/pencilcase.jpeg" alt="logo">
     <br />
-       Marte, apodado a veces como el Planeta Rojo
+       Estuche Big Hero Colores <br>
+       <p>3.500</p>
   </div>
   <div class="photo">
     <img class= "photoGalery" src="../img/eraserpopcorn.jpeg" alt="logo">
     <br />
-       Marte, apodado a veces como el Planeta Rojo
+    Set de 12 Gomas de Borrar <br>
+    <p>$1890</p>
   </div>
   <div class="photo">
     <img class= "photoGalery" src="../img/glue.jpeg" alt="logo">
     <br />
-       Marte, apodado a veces como el Planeta Rojo
+       Pegamento en Barra Patito <br>
+       <p>$1290</p>
   </div>
 </div>
 <div>
@@ -150,17 +156,20 @@
   <div class="photo">
     <img class= "photoGalery" src="../img/notebook.jpg" alt="logo">
     <br />
-       Marte, apodado a veces como el Planeta Rojo
+       Libreta Anillada Pushen <br>
+       <p>$7990</p>
   </div>
   <div class="photo">
     <img class= "photoGalery" src="../img/planner.png" alt="logo">
     <br />
-       Marte, apodado a veces como el Planeta Rojo
+       Planificador Anual "Universo"<br>
+       <p>$10000</p>
   </div>
  <div class="photo">
   <img class= "photoGalery" src="../img/dollsdiary.jpg" alt="logo">
   <br />
-       Marte, apodado a veces como el Planeta Rojo
+       Diario LOL Surprise 2020 <br>
+       <p>$5500</p>
  </div>
 </div>
 </div>
@@ -182,22 +191,23 @@
        </div>
       <div class="content">
         <div class="description">
-          <p>
+          <h3 align="center">
             Lápiz Tinta Gel Multicolor Palta Kawaii
-           </p> <br>
-           <p>$1.000</p> <br>
-           Diseno:
-           <select name="" id="">
+          </h3><br>
+           <p style="color:hotpink ; font-weight: bold;">$1.000</p> <br>
+           <p style="font-weight: bold;">Diseño:
+           <select>
            <option>Elige una opción</option>
            <option value="1">Diseño 1</option>
            <option value="2">Diseño 2</option>
            <option value="3">Diseño 3</option>
-          </select><br>
-            <input id="value" type="number" min="0" max="20"><br>
-          <p>Total a pagar:</p>
-           <p id="total"></p>
-          <button>continuar</button>
-          <button>volver</button>
+          </select></p><br>
+           <p> <input id="value" type="number" min="0" max="20">
+          Total a pagar: <q id="total" style="font-weight: bold;"></q></p><br>
+          <div class="buttonPage">
+            <button id="continue" class="bTn">continuar</button>
+            <button id="init" class="bTn">volver</button>
+          </div>
         </div>
       </div>
      </div>

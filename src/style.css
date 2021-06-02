@@ -231,13 +231,11 @@ footer{
   padding: 5px;
   margin: 5px;
   margin-top: 100px;
-  background-color: blueviolet;
 }
 
 .description{
   height:400px;
   width:400px;
-  background-color: burlywood;
 }
 .photoDetails{
   height: 400px;
@@ -274,6 +272,7 @@ footer{
 .container{
   background-color: #fff;
   width: 600px;
+  height: 200px;
   max-width: 100%;
   padding: 30px 50px;
   border-radius: 5px;
@@ -307,4 +306,20 @@ footer{
 .button{
   top: 50px;
   margin-left: 60px; 
+}
+
+.bTn{
+    background: #f073bc;
+    margin: 12px;
+    padding: 5px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
