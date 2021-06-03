@@ -13,6 +13,8 @@ Para validar el número de tarjeta se aplica el algoritmo de Luhn.
 
 ## 2. Imagen final del proyecto
 
+
+
 ## 3. Investigación UX
 
 3.1 Las usuarias son en general personas mayores de edad que desean aprender una temática de su interés que ofrezca la plataforma.
