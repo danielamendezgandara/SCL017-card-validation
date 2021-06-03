@@ -2,358 +2,458 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900);
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
-
-
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    /*font-family: 'Lato', sans-serif;*/
-  }
-
-body{
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #fcfcfc;
-    font-family: 'Lato', sans-serif;
-    margin:0 10 px;
-  }
-
-/*Página inicial*/
-.header{
-  display:inline-block;
-  position:fixed;
-  font-family: 'Lato', sans-serif;
-  background-color: rgb(248, 248, 179);
-  opacity: 0.9;
-  width:100%;
-  height:22%;
-  top:0;
-  justify-content: flex;
-  align-items:center;
-  text-align: center;
-  padding-right: 200px;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.logopay{
-  background-color: rgb(248, 248, 179);
-  width:100%;
-  height: 30px;
-}
-
-.header img{
-  margin-left: 20%; 
-  width: 170px;
-  height: 163px;
-  top:0;
-}
-
-.link{
-  text-align:center;
-  display:block;
-  position:fixed;
-  background-color: rgb(240, 121, 178);
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(250, 250, 250);
-  font-weight: bold;
-  width:100%;
-  height: auto;
-  margin-top: 0;
-
-}
-
-.link ul{
-  display: inline-block;
-  list-style-type: none;
-  margin: 0.1em auto;
-  margin-left: 25px;
-  text-align: center;
-  
-}
-
-.link ul li{
-  display: inline-block;
-  margin :  5px 100px 5px 5px;
-  text-decoration: none;
-}
-
-li:hover{
-  color: #a8bdf8;
-}
-
-.title{
-  text-align:center;
-  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color:rgb(49, 132, 184);
-  margin-top:18%;
-  font-size: 20px;
-}
-.title-two{
-  text-align:center;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color:rgb(49, 132, 184);
-  margin-top:30%;
-  font-size: 20px;
-}
-
-/* Página de pago*/
-footer{
-  font-size: 20 px;
-  color: #f8f8f8;
-  text-align: right;
+body {
+	height: 100%;
+	background-position: center;
+	background-color: #fcfcfc;
+	font-family: 'Lato', sans-serif;
+	margin: 0 10 px;
 }
 
 
-.subscription{
-  background: #f8f8f8;
-  position: fixed;
-  max-width: 350px;
-  margin: 50px auto;
-  height: auto;
-  padding: 35px;
-  padding-top: 50px;
-  border-radius: 5px;
-  position: relative;
+/*Página inicial : Diseño del encabezado*/
+
+.header {
+	display: inline-block;
+	position: fixed;
+	font-family: 'Lato', sans-serif;
+	background-color: rgb(248, 248, 179);
+	opacity: 0.9;
+	width: 100%;
+	height: 22%;
+	top: 0;
+	justify-content: flex;
+	align-items: center;
+	text-align: center;
+	padding-right: 200px;
 }
 
-.subscription h2{
-    text-align: center;
-    margin-bottom: 8px;
-    color: #eb53ac;
-    padding: 3px 2px 25px;
-  }
 
-  .form .label{
-    display: block;
-    color: #555555;
-    margin-bottom: 10px;
-    font-size:16px;
-  }
-  
-  .input{
-    padding: 13px 0px 13px 25px;
-    width: 100%;
-    text-align: center;
-    font-family:'Source Code Pro';
-    border: 2px solid #dddddd;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    outline: none;
-    font-size: 16px;
-    color: #555555;
-    background:  rgba(0,0,0,0.05);
-    transition: background 0.5s;
-  }
-.input:focus{
-      outline-width: 0;
-      background: rgba(31,134,252, 0.15);
-      transition: background 0.5s;
-    }
+/*Página inicial: Diseño del logotipo de la tienda*/
 
-.icon.fas{
-  position: absolute;
-      bottom: 12px;
-      left: 15px;
+.header img {
+	margin-left: 20%;
+	width: 170px;
+	height: 163px;
+	top: 0;
 }
-.icon-relative{
-      position: relative;
+
+
+/*Página inicial :Diseño del navegador*/
+
+.link {
+	text-align: center;
+	display: block;
+	position: fixed;
+	background-color: rgb(240, 121, 178);
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(250, 250, 250);
+	font-weight: bold;
+	width: 100%;
+	height: auto;
+	margin-top: 0;
 }
-    
+
+.link ul {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0.1em auto;
+	margin-left: 25px;
+	text-align: center;
+}
+
+.link ul li {
+	display: inline-block;
+	margin: 5px 100px 5px 5px;
+	text-decoration: none;
+}
+
+
+/*Cambio de color cuando se pasa el cursor*/
+
+li:hover {
+	color: #a8bdf8;
+}
+
+
+/*Página inicial : Diseño de los títulos de los productos*/
+
+.title {
+	text-align: center;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: rgb(49, 132, 184);
+	margin-top: 18%;
+	font-size: 20px;
+}
+
+.title-two {
+	text-align: center;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: rgb(49, 132, 184);
+	margin-top: 30%;
+	font-size: 20px;
+}
+
+
+/*Página inicial:Diseño de las divisiones que contienen las imágenes de los productos*/
+
+.photo {
+	display: inline;
+	width: 220px;
+	margin-left: 160px;
+	margin-bottom: 45px;
+	font-family: 'Lato';
+	float: left;
+}
+
+
+/*Página inicial: Diseño de las imágenes de los productos*/
+
+.photoGalery {
+	display: inline;
+	height: 200px;
+	width: 200px;
+	margin-top: 60px;
+	margin-bottom: 10px;
+}
+
+
+/*Segunda página: Descripción del header con class logopay*/
+
+.logopay {
+	background-color: rgb(248, 248, 179);
+	width: 100%;
+	height: 30px;
+}
+
+
+/*Segunda página: Diseño de la división details que describe al producto seleccionado*/
+
+.details {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/*Segunda página: Se utiliza dos veces class content, en una sección de la sección details se encuentra*/
+
+
+/*la imagen descriptiva del producto y en la otra contiene la descripción en palabras*/
+
+.content {
+	padding: 5px;
+	margin: 5px;
+	margin-top: 100px;
+}
+
+
+/*Segunda página: class description contiene el texto alusivo a la descripción del producto*/
+
+.description {
+	height: 400px;
+	width: 400px;
+}
+
+
+/*Segunda página: Se llama a la class photoDetails para definir el ancho y largo de la imagen */
+
+.photoDetails {
+	height: 400px;
+	width: 400px;
+}
+
+
+/*Segunda página : De la class buttonPage se define la sección que contiene los botones de continuar y volver*/
+
+.buttonPage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Segunda página : class bTn describe las características de los botones continuar y volver*/
+
+.bTn {
+	background: #f073bc;
+	margin: 12px;
+	padding: 5px;
+	text-align: center;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+/*Tercera página: Método de pago*/
+
+
+/*Tercera página : Se llama a class subscription para definir las características de la sección que contiene los 
+elementos de método de pago*/
+
+.subscription {
+	background: #f8f8f8;
+	position: fixed;
+	max-width: 350px;
+	margin: 50px auto;
+	height: auto;
+	padding: 35px;
+	padding-top: 50px;
+	border-radius: 5px;
+	position: relative;
+}
+
+
+/* Tercera página : Se llama a la class subscription para indicar las características del título de encabezado*/
+
+.subscription h2 {
+	text-align: center;
+	margin-bottom: 8px;
+	color: #eb53ac;
+	padding: 3px 2px 25px;
+}
+
+
+/*Tercera página : Se llama a la class form.label para describir los títulos que describen el tipo de entrada a recibir*/
+
+.form .label {
+	display: block;
+	color: #555555;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+
+/* Tercera página : Se llama a la class input para diseñar los elementos de tipo input*/
+
+.input {
+	padding: 13px 0px 13px 25px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Source Code Pro';
+	border: 2px solid #dddddd;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	outline: none;
+	font-size: 16px;
+	color: #555555;
+	background: rgba(0, 0, 0, 0.05);
+	transition: background 0.5s;
+}
+
+
+/* input:focus describe cómo se vería el elemento input al hacer click dentro de él*/
+
+.input:focus {
+	outline-width: 0;
+	background: rgba(31, 134, 252, 0.15);
+	transition: background 0.5s;
+}
+
+
+/*icon.fas describe la posición del ícono y su delimitación en el espacio indicado*/
+
+.icon.fas {
+	position: absolute;
+	bottom: 12px;
+	left: 15px;
+}
+
+.icon-relative {
+	position: relative;
+}
+
+
+/* se define para la class icon-relative los siguientes parámetros*/
+
 .icon-relative .fas,
-.icon-relative .far{
-      position: absolute;
-      bottom: 12px;
-      left: 15px;
-      font-size: 20px;
-      color: #555555;
-}
-.input-date{
-    display: block;
-    width: 100%;
-    margin: 0px 3px 3px 0px;
-    padding: 10px 0px 13px 10px;
-    font-size: 16px;
-    font-family: 'Source Code Pro';
-    text-align: center;
-    border: 2px solid #dddddd;
-    border-radius: 5px;
-    color: #555555;
-    background: rgba(0,0,0,0.05);
-    transition: background 0.5s;
+.icon-relative .far {
+	position: absolute;
+	bottom: 12px;
+	left: 15px;
+	font-size: 20px;
+	color: #555555;
 }
 
-.input-date:focus{
-  outline-width: 0;
-  background: rgba(31,134,252, 0.15);
-  transition: background 0.5s;
-}
-  .card-grp{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .card-item{
-    width: 70%;
-  }
-  .expire-space{
-    display: flex;
-    justify-content:flex-start;
-  }
 
-  .space{
-    margin-bottom: 20px;
-  }
-  .btn{
-    margin-top: 10px;
-    background: #969697;
-    padding: 12px;
-    text-align: center;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+/* se define para la class input date que indica la sección que contiene el selector de la fecha de expiración*/
 
-  .photo{
-    display: inline;
-    width: 220px;
-    margin-left: 160px; 
-    margin-bottom: 45px;
-    font-family:'Lato';
-    float:left;
-  }
-  .photoGalery{
-    display: inline;
-    height: 200px;
-    width: 200px;
-    margin-top: 60px;
-    margin-bottom: 10px;
-  }
-.details{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.content{
-  padding: 5px;
-  margin: 5px;
-  margin-top: 100px;
+
+/*de la tarjeta*/
+
+.input-date {
+	display: block;
+	width: 100%;
+	margin: 0px 3px 3px 0px;
+	padding: 10px 0px 13px 10px;
+	font-size: 16px;
+	font-family: 'Source Code Pro';
+	text-align: center;
+	border: 2px solid #dddddd;
+	border-radius: 5px;
+	color: #555555;
+	background: rgba(0, 0, 0, 0.05);
+	transition: background 0.5s;
 }
 
-.description{
-  height:400px;
-  width:400px;
-}
-.photoDetails{
-  height: 400px;
-  width: 400px;
-}
-  @media screen and (max-width:420px){
-    .card-grp{
-      flex-direction: column;
-    }
-    .card-item{
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .btn{
-      margin-top: 10px;
-    }
-    header{
-      padding: 0;
-    }
-  }
-/*Página emergente*/
-.pop_up_window{
-    display: none;
-    background-color:rgba(0,0,0,0.3);
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
+.input-date:focus {
+	outline-width: 0;
+	background: rgba(31, 134, 252, 0.15);
+	transition: background 0.5s;
 }
 
-.container{
-  background-color: #fff;
-  width: 600px;
-  height: 200px;
-  max-width: 100%;
-  padding: 30px 50px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  text-align: center;
-  position: absolute;
-  left: 26%;
-  top: 35%;
+
+/* Se define el diseño para el input de la class input de la class card-grp*/
+
+.input.card-grp {
+	width: 70px;
+	height: 30px;
 }
 
-#select{
-  font-family: 'Source Code Pro';
-  display: none;
-  background:  rgba(0,0,0,0.05);
-  border: none;
-  outline: none;
 
-}
-#select:focus{ outline: none;}
+/*Se define para las siguientes class que indican las secciones correspondiente las características de diseño*/
 
-#cvc::placeholder {
-  text-align: center;
-}
-            
-.input.card-grp{
-  width: 70px;
-  height: 30px;
-
+.card-grp {
+	display: flex;
+	justify-content: space-between;
 }
 
-.button{
-  top: 50px;
-  margin-left: 60px; 
+.card-item {
+	width: 70%;
 }
 
-.bTn{
-    background: #f073bc;
-    margin: 12px;
-    padding: 5px;
-    text-align: center;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
+.expire-space {
+	display: flex;
 }
 
-.buttonPage{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.detailsPay{
- display:block;
- justify-content: center;
- margin-left: 450px;
- margin-top: 60px;
- width:400px;
- height:350px;
- font-family:Arial, Helvetica, sans-serif;
- background-color:#fdfdfd;
- border: 2px solid #020202;
+.space {
+	margin-bottom: 20px;
 }
 
-.descriptionPay{
-  height:300px;
-  width:400px;
-  padding: 10px 10px 5px 5px;
-  margin: 5px;
-  text-align: center;
-  font-size: 13px;
+
+/*Tercera página: para class button se define el siguiente diseño:*/
+
+.button {
+	top: 50px;
+	margin-left: 60px;
 }
 
-.finish{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/*Tercera página : Se define para la class btn de class button el siguiente diseño para el botón*/
+
+.btn {
+	margin-top: 10px;
+	background: #969697;
+	padding: 12px;
+	text-align: center;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+/*Se define para el elemento footer el diseño de texto que contiene*/
+
+footer {
+	font-size: 20 px;
+	color: #f8f8f8;
+	text-align: right;
+}
+
+
+/*Se describe que la sección wrapper que contiene subscription que está destinado principalmente a pantallas*/
+
+@media screen and (max-width:420px) {
+	.card-grp {
+		flex-direction: column;
+	}
+	.card-item {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.btn {
+		margin-top: 10px;
+	}
+	header {
+		padding: 0;
+	}
+}
+
+
+/*Página emergente: se define para la class pop_up_window el siguiente diseño*/
+
+
+/* la sección de class pop_up_window describe la pantalla de fondo y va contener la sección de class container*/
+
+.pop_up_window {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.3);
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+.container {
+	background-color: #fff;
+	width: 600px;
+	height: 200px;
+	max-width: 100%;
+	padding: 30px 50px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	position: absolute;
+	left: 26%;
+	top: 35%;
+}
+
+
+/*Cuarta página :Detalles de la compra*/
+
+
+/* La class detailsPay define a la sección que contiene el detalle de la compra */
+
+.detailsPay {
+	display: block;
+	justify-content: center;
+	margin-left: 450px;
+	margin-top: 60px;
+	width: 400px;
+	height: 350px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #fdfdfd;
+	border: 2px solid #020202;
+}
+
+
+/*la class descriptionPay describe la sección que delimita el contenido escrito */
+
+.descriptionPay {
+	height: 300px;
+	width: 400px;
+	padding: 10px 10px 5px 5px;
+	margin: 5px;
+	text-align: center;
+	font-size: 13px;
+}
+
+
+/*la class finish describe a la sección que contiene el botón de volver a la página inicial*/
+
+.finish {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
