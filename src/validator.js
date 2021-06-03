@@ -51,7 +51,7 @@ const validator = {
 			// En el caso de que i sea menor a la longitud menos 4 de la cadena de texto almacenada en creditNumber
 			if (i < cardNumber.length - 4) {
 			// Se le añadirá a hideNum un símbolo para enmascarar el dígito de la tarjeta
-				hideNum.push("●");
+				hideNum.push("#");
 			// De lo contrario se almacenará en hideNum el dígito de la tarjeta en la posición actual
 			} else {
 				hideNum.push(cardNumber[i]);

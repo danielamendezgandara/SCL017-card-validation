@@ -18,7 +18,17 @@ const quantity=document.getElementById("value");
 const total=document.getElementById("total");
 const follow = document.getElementById("continue");
 const init = document.getElementById("init");
+const checkPay=document.getElementById("block");
+const purchaseTicket=document.getElementById("purchaseTicket");
+const ocult=document.getElementById("ocult");
+const totalPay=document.getElementById("invisible");
+const totalPayProducts=document.getElementById("totalPayProducts");
+const unit=document.getElementById("unit");
+const namePay=document.getElementById("namePay");
+const acount=document.getElementById("acount");
+const finish=document.getElementById("finish");
 let shelf;
+let sum;
 let state = "";
 let cont = 0;
 
@@ -26,13 +36,15 @@ let cont = 0;
 wrapper.style.display="none";
 aboutPage.style.display="block";
 buyDetails.style.display="none";
+purchaseTicket.style.display="none";
+ocult.style.display="none";
 
-
-buyProduct2.addEventListener("click",buy);
 buyProduct1.addEventListener("click",detailsBuy);
 cancel.addEventListener("click",cancelled);
 follow.addEventListener("click",buy);
 init.addEventListener("click",begin);
+totalPay.addEventListener("click",totalCancel);
+finish.addEventListener("click",finishPay);
 
 function buy(){
 	wrapper.style.display="block";
@@ -47,11 +59,12 @@ function detailsBuy(){
 
 function cancelled(){
 	wrapper.style.display="none";
+	numberCard.value="";
 	aboutPage.style.display="block";
+	location.reload();
 }
 
 quantity.onchange = function () {
-	let sum;
 	sum=(quantity.value)*1000;
 	total.innerHTML="$" + sum;
 }
@@ -59,8 +72,23 @@ quantity.onchange = function () {
 function begin(){
 	aboutPage.style.display="block";
 	buyDetails.style.display="none";
+	location.reload();
 }
 
+function totalCancel(){
+   wrapper.style.display="none";
+   unit.innerHTML="Unidades : " +"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" + quantity.value;
+   totalPayProducts.innerHTML= "Monto :"+ "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;"+ "$" + sum ;
+   namePay.innerHTML= "Nombre :"+"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" + name.value.toUpperCase();
+   acount.innerHTML= "Cuenta : " + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"+ numberCard.value;
+   purchaseTicket.style.display="block";
+}
+
+function finishPay(){
+	purchaseTicket.style.display="none";
+	aboutPage.style.display="block";
+	location.reload();
+}
 name.onkeypress = function (e) {
 	let key = e.keyCode || e.which;
 	let computerKey = String.fromCharCode(key).toLowerCase();
@@ -79,6 +107,7 @@ name.onkeypress = function (e) {
 	if (letters.indexOf(computerKey) == -1 && !especialKey) {
 		return false;
 	}
+
 }
 
 numberCard.onkeypress = function (evt) {
@@ -105,8 +134,10 @@ function validation() {
 		state = "";	
 	}else{
     message.innerHTML="Su tarjeta es válida. Puede continuar con su compra."
+	checkPay.className = "fas fa-check-circle fa-3x";
+	checkPay.style.color="lightblue";
+	ocult.style.display="block";
     popUpWindow.style.display= "block";
-	numberCard.value = "";
 	state = "";
   }
 }
@@ -133,7 +164,5 @@ function closeWindow() {
 	popUpWindow.style.display = "none";
 	cvc.value = "";
 	state = "";
-	
-
 }
 

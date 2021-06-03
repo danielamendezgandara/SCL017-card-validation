@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body> 
-    <div id= "wrapper" class="wrapper">
-      <header class="logopay">
-        <nav class="link">
-      <ul>
-          <li>INICIO</li>
-          <li>PRODUCTOS</li>
-          <li>NOVEDADES</li>
-          <li>OFERTAS</li>
-          <li>ACERCA DE  NOSOTRAS</li>
-      </ul>
-  </nav>
-        <img class="logo" src="../img/logo.png" alt="logo" width="12%">
-      </header>
-      <div id= "pay" class="subscription" >
-          <h2>Información de pago</h2> 
-         <form class="form" id="check" method="post">
-              <div id="form"   class="cardNumber space icon-relative">
-                   <label class="label">NOMBRE EN LA TARJETA</label>
-                    <input type="text" id="name" class="input" name="name"  required>
-                    <i class="fas fa-user"></i>
-              </div>
-              <div class="cardNumber space icon-relative">
-                   <label class="label">NÚMERO DE LA TARJETA</label>
-                   <input type="text" id= "number" class="input" name="cardNumber" maxlength="16" placeholder="0000-0000-0000-0000" autocomplete="off" required>
-                   <i class="far fa-credit-card"></i>
-              </div>
+   <head>
+      <meta charset="utf-8">
+      <title>Tarjeta de crédito válida</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <!--Página que presenta el medio de pago en donde se valida la tarjeta-->
+      <div id= "wrapper" class="wrapper">
+         <header class="logopay">
+            <nav class="link">
+               <ul>
+                  <li>INICIO</li>
+                  <li>PRODUCTOS</li>
+                  <li>NOVEDADES</li>
+                  <li>OFERTAS</li>
+                  <li>ACERCA DE  NOSOTRAS</li>
+               </ul>
+            </nav>
+            <img class="logo" src="../img/logo.png" alt="logo" width="12%">
+         </header>
+         <div id= "pay" class="subscription" >
+            <h2>Medio de pago</h2>
+            <form class="form" id="check" method="post">
+               <div id="form"   class="cardNumber space icon-relative">
+                  <label class="label">NOMBRE EN LA TARJETA</label>
+                  <input type="text" id="name" class="input" name="name"  required>
+                  <i class="fas fa-user"></i>
+               </div>
+               <div class="cardNumber space icon-relative">
+                  <label class="label">NÚMERO DE LA TARJETA</label>
+                  <input type="text" id= "number" class="input" name="cardNumber" maxlength="16" placeholder="0000-0000-0000-0000" autocomplete="off" required>
+                  <i class="far fa-credit-card"></i>
+               </div>
                <div class="card-grp space">
-                    <div class="card-item">
-                        <label class="label">EXPIRA</label>
-                         <div class="expire-space">
-                         <select id="expire-month"  class="input-date" required>
-                                 <option>00</option>
-                                 <option value="1">01</option>
-                                 <option value="2">02</option>
-                                 <option value="3">03</option>
-                                 <option value="4">04</option>
-                                 <option value="5">05</option>
-                                 <option value="6">06</option>
-                                 <option value="7">07</option>
-                                 <option value="8">08</option>
-                                 <option value="9">10</option>
-                                 <option value="11">11</option>
-                                 <option value="12">12</option>
-                                 </select>
-                       <select id="expire-year" class="input-date" required>
+                  <div class="card-item">
+                     <label class="label">EXPIRA</label>
+                     <div class="expire-space">
+                        <select id="expire-month"  class="input-date" required>
+                           <option>00</option>
+                           <option value="1">01</option>
+                           <option value="2">02</option>
+                           <option value="3">03</option>
+                           <option value="4">04</option>
+                           <option value="5">05</option>
+                           <option value="6">06</option>
+                           <option value="7">07</option>
+                           <option value="8">08</option>
+                           <option value="9">10</option>
+                           <option value="11">11</option>
+                           <option value="12">12</option>
+                        </select>
+                        <select id="expire-year" class="input-date" required>
                            <option>00</option>
                            <option value="2016">16</option>
                            <option value="2017">17</option>
@@ -68,149 +69,206 @@
                            <option value="2028">28</option>
                            <option value="2029">29</option>
                            <option value="2030">30</option>
-                       </select>
-                    </div>
-                 </div>
-                    <div class="card_item icon-relative">
-                         <label class="label">CVC</label>
-                         <input type="text" id="cvc" class="input" name="cvc" maxlength="3" placeholder="000" required>
-                         <i class="fas fa-lock"></i>
-                    </div>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="card_item icon-relative">
+                     <label class="label">CVC</label>
+                     <input type="text" id="cvc" class="input" name="cvc" maxlength="3" placeholder="000" required>
+                     <i class="fas fa-lock"></i>
+                  </div>
                </div>
                <div class="button" >
-                     <input type="submit" id="send" class="btn" value="ENVIAR"> 
-                     <button id="cancel"class="btn">CANCELAR</button> 
+                  <input type="submit" id="send" class="btn" value="ENVIAR"> 
+                  <button id="cancel" class="btn">CANCELAR</button> 
                </div>
-        </form>
-        <div class="pop_up_window" id="pop_up_window">
-            <div class="container">
-              <p id="message">Su tarjeta no es válida.Vuelva a intentarlo o cancele su compra.</p><br>
-              <button id="close" class="bTn">Cerrar</button> 
-            </div>    
+            </form>
+            <!--Página emergente al momento de validar la  tarjeta-->
+            <div class="pop_up_window" id="pop_up_window">
+               <div class="container icon">
+                  <p id="message">Su tarjeta no es válida.Vuelva a intentarlo o cancele su compra.</p>
+                  <br>
+                  <i id="block" class="fas fa-times fa-3x" style="color:darkred"></i><br>
+                  <div class="buttonPage">
+                     <button id="close" class="bTn">Cerrar</button>
+                     <div id="ocult">
+                        <button id="invisible" class="bTn">Continuar</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer>
+            <p>&#169; 2021 <a href="#"  style="text-decoration:none"><br>KawaiiPaper</a></p>
+         </footer>
       </div>
+      <!--Página de inicio en donde se pueden observar los productos-->
+      <div id="aboutPage" class="about">
+         <header class="header">
+            <nav class="link">
+               <ul>
+                  <li>INICIO</li>
+                  <li>PRODUCTOS</li>
+                  <li>NOVEDADES</li>
+                  <li>OFERTAS</li>
+                  <li>ACERCA DE  NOSOTRAS</li>
+               </ul>
+            </nav>
+            <img class="logo" src="../img/logo.png" alt="logo" width="30%">
+         </header>
+         <div >
+            <h3 class="title">Lápices</h3>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/pencils.jpeg" alt="logo">
+               <br />
+               Lápiz Tinta Gel Multicolor Palta<br>
+               <p>$1000</p>
+               <a  id="buy1" style="text-decoration:none ; font-weight: bold;" href="#">COMPRAR</a>
+            </div>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/pencilpony.jpeg" alt="logo">
+               <br />
+               Lápiz Portaminas Unicornio <br> 
+               <p>$1500</p>
+               <a  id="buy2"  style="text-decoration:none" href="#">COMPRAR</a>
+            </div>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/bearpencil.jpeg" alt="logo">
+               <br />
+               Lápiz Tinta Gel Negro Osito<br>
+               <p>$600</p>
+               <a  id="buy3"  style="text-decoration:none" href="#">COMPRAR</a>
+            </div>
+         </div>
+         <div>
+            <h3 class="title-two">Accesorios</h3>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/pencilcase.jpeg" alt="logo">
+               <br />
+               Estuche Big Hero Colores <br>
+               <p>3.500</p>
+            </div>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/eraserpopcorn.jpeg" alt="logo">
+               <br />
+               Set de 12 Gomas de Borrar <br>
+               <p>$1890</p>
+            </div>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/glue.jpeg" alt="logo">
+               <br />
+               Pegamento en Barra Patito <br>
+               <p>$1290</p>
+            </div>
+         </div>
+         <div>
+            <h3 class="title-two">Cuadernos y libretas</h3>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/notebook.jpg" alt="logo">
+               <br />
+               Libreta Anillada Pushen <br>
+               <p>$7990</p>
+            </div>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/planner.png" alt="logo">
+               <br />
+               Planificador Anual "Universo"<br>
+               <p>$10000</p>
+            </div>
+            <div class="photo">
+               <img class= "photoGalery" src="../img/dollsdiary.jpg" alt="logo">
+               <br />
+               Diario LOL Surprise 2020 <br>
+               <p>$5500</p>
+            </div>
+         </div>
       </div>
-      <footer>
-        <p>&#169; 2021 <a href="#"  style="text-decoration:none"><br>KawaiiPaper</a></p>
-      </footer>
- </div>
- <div id="aboutPage" class="about">
-  <header class="header">
-    <nav class="link">
-      <ul>
-          <li>INICIO</li>
-          <li>PRODUCTOS</li>
-          <li>NOVEDADES</li>
-          <li>OFERTAS</li>
-          <li>ACERCA DE  NOSOTRAS</li>
-      </ul>
-  </nav>
-    <img class="logo" src="../img/logo.png" alt="logo" width="30%">
-  </header>
-  <div >
-     <h3 class="title">Lápices</h3>
-     <div class="photo">
-      <img class= "photoGalery" src="../img/pencils.jpeg" alt="logo">
-      <br />
-      Lápiz Tinta Gel Multicolor Palta<br>
-      <p>$1000</p>
-      <a  id="buy1"  style="text-decoration:none" href="#">COMPRAR</a>
-     </div>
-     <div class="photo">
-      <img class= "photoGalery" src="../img/pencilpony.jpeg" alt="logo">
-      <br />
-      Lápiz Portaminas Unicornio <br> 
-      <p>$1500</p>
-       <a  id="buy2"  style="text-decoration:none" href="#">COMPRAR</a>
-     </div>
-     <div class="photo">
-      <img class= "photoGalery" src="../img/bearpencil.jpeg" alt="logo">
-      <br />
-      Lápiz Tinta Gel Negro Osito<br>
-      <p>$600</p>
-       <a  id="buy3"  style="text-decoration:none" href="#">COMPRAR</a>
-     </div>
-</div>
-<div>
-  <h3 class="title-two">Accesorios</h3>
-  <div class="photo">
-    <img class= "photoGalery" src="../img/pencilcase.jpeg" alt="logo">
-    <br />
-       Estuche Big Hero Colores <br>
-       <p>3.500</p>
-  </div>
-  <div class="photo">
-    <img class= "photoGalery" src="../img/eraserpopcorn.jpeg" alt="logo">
-    <br />
-    Set de 12 Gomas de Borrar <br>
-    <p>$1890</p>
-  </div>
-  <div class="photo">
-    <img class= "photoGalery" src="../img/glue.jpeg" alt="logo">
-    <br />
-       Pegamento en Barra Patito <br>
-       <p>$1290</p>
-  </div>
-</div>
-<div>
-  <h3 class="title-two">Cuadernos y libretas</h3>
-  <div class="photo">
-    <img class= "photoGalery" src="../img/notebook.jpg" alt="logo">
-    <br />
-       Libreta Anillada Pushen <br>
-       <p>$7990</p>
-  </div>
-  <div class="photo">
-    <img class= "photoGalery" src="../img/planner.png" alt="logo">
-    <br />
-       Planificador Anual "Universo"<br>
-       <p>$10000</p>
-  </div>
- <div class="photo">
-  <img class= "photoGalery" src="../img/dollsdiary.jpg" alt="logo">
-  <br />
-       Diario LOL Surprise 2020 <br>
-       <p>$5500</p>
- </div>
-</div>
-</div>
-   <div id="buydetails"class="buydetails">
-    <header class="logopay">
-      <nav class="link">
-    <ul>
-        <li>INICIO</li>
-        <li>PRODUCTOS</li>
-        <li>NOVEDADES</li>
-        <li>OFERTAS</li>
-        <li>ACERCA DE  NOSOTRAS</li>
-    </ul>
-    </nav>
-    </header>
-     <div class="details">
-       <div class="content">
-         <img class="photoDetails" src="../img/pencils.jpeg" alt="pencils">
-       </div>
-      <div class="content">
-        <div class="description">
-          <h3 align="center">
-            Lápiz Tinta Gel Multicolor Palta Kawaii
-          </h3><br>
-           <p style="color:hotpink ; font-weight: bold;">$1.000</p> <br>
-           <p style="font-weight: bold;">Diseño:
-           <select>
-           <option>Elige una opción</option>
-           <option value="1">Diseño 1</option>
-           <option value="2">Diseño 2</option>
-           <option value="3">Diseño 3</option>
-          </select></p><br>
-           <p> <input id="value" type="number" min="0" max="20">
-          Total a pagar: <q id="total" style="font-weight: bold;"></q></p><br>
-          <div class="buttonPage">
-            <button id="continue" class="bTn">continuar</button>
-            <button id="init" class="bTn">volver</button>
-          </div>
-        </div>
+      <!--Página que describe los detalles del producto seleccionado-->
+      <div id="buydetails" class="buydetails" >
+         <header class="logopay">
+            <nav class="link">
+               <ul>
+                  <li>INICIO</li>
+                  <li>PRODUCTOS</li>
+                  <li>NOVEDADES</li>
+                  <li>OFERTAS</li>
+                  <li>ACERCA DE  NOSOTRAS</li>
+               </ul>
+            </nav>
+         </header>
+         <div class="details">
+            <div class="content">
+               <img class="photoDetails" src="../img/pencils.jpeg" alt="pencils">
+            </div>
+            <div class="content">
+               <div class="description">
+                  <h3 style="text-align: center;">
+                     Lápiz Tinta Gel Multicolor Palta Kawaii
+                  </h3>
+                  <br>
+                  <p style="color:hotpink ; font-weight: bold;">$1.000</p>
+                  <br>
+                  <p style="font-weight: bold;">
+                     Diseño:
+                     <select style="text-align: center;">
+                        <option>Elige una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                     </select>
+                  </p>
+                  <br>
+                  <p> <input id="value" type="number" min="1" max="20">
+                     Total a pagar: <q id="total" style="font-weight: bold;"></q>
+                  </p>
+                  <br>
+                  <div class="buttonPage">
+                     <button id="continue" class="bTn">continuar</button>
+                     <button id="init" class="bTn">volver</button>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-     </div>
-    <script src="index.js" type="module"></script>
-  </body>
+      <!--Página que muestra el detalle de la compra-->
+      <div id="purchaseTicket" >
+         <header class="logopay">
+            <nav class="link">
+               <ul>
+                  <li>INICIO</li>
+                  <li>PRODUCTOS</li>
+                  <li>NOVEDADES</li>
+                  <li>OFERTAS</li>
+                  <li>ACERCA DE  NOSOTRAS</li>
+               </ul>
+            </nav>
+            <img class="logo" src="../img/logo.png" alt="logo" width="12%">
+         </header>
+         <br><br>
+         <h3  style="text-align:center;color: cornflowerblue;">¡Muchas gracias por su compra!</h3>
+         <div class="detailsPay">
+            <div class="descriptionPay">
+               <h3  style="text-align:center;font-size:18px;">
+                  Transferencia exitosa
+               </h3>
+               <br>
+               <i class="fas fa-check-circle fa-3x" style="color:rgb(247, 78, 157)"></i><br><br>
+               <p id="totalPayProducts"></p>
+               <br><br>
+               <p id="namePay"></p>
+               <br><br>
+               <p id="acount"></p>
+               <br><br>
+               <p>Descripción:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lápiz Tinta Gel Mul Palta Kawaii</p>
+               <br><br>
+               <p id="unit"></p>
+               <br>
+            </div>
+         </div>
+         <div class="finish">
+            <button id="finish" class="bTn">volver</button>
+         </div>
+      </div>
+      <script src="index.js" type="module"></script>
+   </body>
 </html>
