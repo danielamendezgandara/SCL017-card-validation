@@ -22,8 +22,7 @@ Para validar el número de tarjeta se aplica el algoritmo de Luhn.
 
 ## 3. Investigación UX
 
-
-  1. Las usuarios o usuarios son personas interesadas en adquirir productos de papelería de temática kawaii.
+  1. Las usuarias o usuarios son personas interesadas en adquirir productos de papelería de temática kawaii.
   2. El producto ofrecido satisface la necesidad de comprar objetos de temática kawaii que sean bonitos y útiles.
   3. El prototipo inicial en papel es el siguiente:
 
