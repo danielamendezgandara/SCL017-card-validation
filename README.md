@@ -45,4 +45,8 @@ Para validar el número de tarjeta se aplica el algoritmo de Luhn.
 * Diseñar la aplicación pensando y entendiendo al usuario
 * Aplicar el feedback entregado e iterar más
 
+## 7. GitHub Pages
+
+https://danielamendezgandara.github.io/SCL017-card-validation/
+
 
