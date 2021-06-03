@@ -13,7 +13,8 @@ Para validar el número de tarjeta se aplica el algoritmo de Luhn.
 
 ## 2. Imagen final del proyecto
 
-
+![Aquí la descripción de la imagen por si no carga](https://raw.githubusercontent.com/danielamendezgandara/
+SCL017-card-validation/master/imgREADME/finishProject.PNG) 
 
 ## 3. Investigación UX
 
