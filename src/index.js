@@ -9,6 +9,7 @@ const check = document.getElementById("check");
 const name = document.getElementById("name");
 const cvc = document.getElementById("cvc");
 const numberCard = document.getElementById("number");
+const logoCreditCard = document.getElementById("logoCreditCard");
 const aboutPage = document.getElementById("aboutPage");
 const buyProduct1 = document.getElementById("buy1");
 const buyProduct2 = document.getElementById("buy2");
@@ -33,6 +34,7 @@ const namePay = document.getElementById("namePay");
 const acount = document.getElementById("acount");
 const descriptionProduct = document.getElementById("descriptionProduct");
 const finish = document.getElementById("finish");
+const print= document.getElementById("print");
 /*Declaración de variables*/
 let shelf;
 let sum;
@@ -56,6 +58,7 @@ follow.addEventListener("click", buy);
 init.addEventListener("click", begin);
 totalPay.addEventListener("click", totalCancel);
 finish.addEventListener("click", finishPay);
+print.addEventListener("click",voucherPrint);
 
 /*Funciones asociadas a los eventos declarados anteriormente*/
 function buy() {
@@ -128,6 +131,10 @@ function finishPay() {
     location.reload();
 }
 
+function voucherPrint(){
+    window.print();
+}
+
 quantity.onchange = function() {
     sum = (quantity.value) * priceProduct;
     total.innerHTML = "$" + sum;
@@ -163,6 +170,17 @@ numberCard.onkeypress = function(evt) {
     } else {
         numberCard.onkeyup = function(e) {
             shelf = e.currentTarget.value;
+            if (shelf[0] == 4 ){
+                logoCreditCard.src="../img/visa.png";
+            }else if ( shelf [0] == 5){
+                logoCreditCard.src="../img/mastercard.png";
+            }else if (shelf[0] == 3){
+                logoCreditCard.src="../img/americanexpress.jpg";
+            }else if (shelf[0]== 6){
+                logoCreditCard.src="../img/discovercard.png";
+            }else if (shelf[0]== 1){
+                logoCreditCard.src="../img/redcompra.png";
+            }
             state = state + shelf.charAt(cont);
             numberCard.value = validator.maskify(numberCard.value);
             cont = cont + 1;

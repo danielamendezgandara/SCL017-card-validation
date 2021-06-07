@@ -29,8 +29,8 @@
                   <input type="text" id="name" class="input" name="name"  required>
                   <i class="fas fa-user"></i>
                </div>
-               <div class="cardNumber space icon-relative">
-                  <label class="label">NÚMERO DE LA TARJETA</label>
+               <div id="cardNumberSpace" class="cardNumber space icon-relative">
+                  <label class="label">NÚMERO DE LA TARJETA      <img id="logoCreditCard" width="12%"> </label>
                   <input type="text" id= "number" class="input" name="cardNumber" maxlength="16" placeholder="0000-0000-0000-0000" autocomplete="off" required>
                   <i class="far fa-credit-card"></i>
                </div>
@@ -212,9 +212,9 @@
                      Diseño:
                      <select>
                         <option>Elige una opción</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
                      </select>
                   </p>
                   <br>
@@ -222,6 +222,19 @@
                      Total a pagar: <q id="total"></q>
                   </p>
                   <br>
+                  <div class="paymentMethod">
+                     <p>Elige el método de pago</p>
+                   <form action="">
+                      <input type="radio" name="transfer"/> Webpay Transbank <span></span><img src="../img/weypay.png" alt="" width="20%">  
+                      <br><br>
+                     <label>
+                      <input type="radio" name="transfer"/> Servipag <img src="../img/servipag.png" alt="" width="20%">  
+                     </label><br><br>
+                     <label>
+                      <input type="radio" name="transfer" value="3"/> Transferencia bancaria <i class="fas fa-receipt"></i>
+                     </label><br>
+                   </form>
+                  </div><br>
                   <div class="buttonPage">
                      <button id="continue" class="bTn">continuar</button>
                      <button id="init" class="bTn">volver</button>
@@ -267,6 +280,7 @@
          </div>
          <div class="finish">
             <button id="finish" class="bTn">volver</button>
+            <button id="print" class="bTn">imprimir</button>
          </div>
       </div>
       <script src="index.js" type="module"></script>
