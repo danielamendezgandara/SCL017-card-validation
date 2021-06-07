@@ -88,7 +88,7 @@
                <div class="container icon">
                   <p id="message">Su tarjeta no es válida.Vuelva a intentarlo o cancele su compra.</p>
                   <br>
-                  <i id="block" class="fas fa-times fa-3x" style="color:darkred"></i><br>
+                  <i id="block" class="fas fa-times fa-3x"></i><br>
                   <div class="buttonPage">
                      <button id="close" class="bTn">Cerrar</button>
                      <div id="ocult">
@@ -116,28 +116,28 @@
             </nav>
             <img class="logo" src="../img/logo.png" alt="logo" width="30%">
          </header>
-         <div >
+         <div class="productSample">
             <h3 class="title">Lápices</h3>
             <div class="photo">
                <img class= "photoGalery" src="../img/pencils.jpeg" alt="logo">
                <br />
                Lápiz Tinta Gel Multicolor Palta<br>
                <p>$1.000</p>
-               <a  id="buy1" style="text-decoration:none ; font-weight: bold;" href="#">COMPRAR</a>
+               <a  id="buy1" href="#">COMPRAR</a>
             </div>
             <div class="photo">
                <img class= "photoGalery" src="../img/pencilpony.jpeg" alt="logo">
                <br />
                Lápiz Portaminas Unicornio <br> 
                <p>$1.500</p>
-               <a  id="buy2"  style="text-decoration:none" href="#">COMPRAR</a>
+               <a  id="buy2" href="#">COMPRAR</a>
             </div>
             <div class="photo">
                <img class= "photoGalery" src="../img/bearpencil.jpeg" alt="logo">
                <br />
                Lápiz Tinta Gel Negro Osito<br>
                <p>$600</p>
-               <a  id="buy3"  style="text-decoration:none" href="#">COMPRAR</a>
+               <a  id="buy3" href="#">COMPRAR</a>
             </div>
          </div>
          <div>
@@ -198,19 +198,19 @@
          </header>
          <div class="details">
             <div class="content">
-               <img class="photoDetails" src="../img/pencils.jpeg" alt="pencils">
+               <img id="selectImg" class="photoDetails" src="../img/pencils.jpeg" alt="pencils">
             </div>
             <div class="content">
                <div class="description">
-                  <h3 style="text-align: center;">
+                  <h3 id="titleProduct">
                      Lápiz Tinta Gel Multicolor Palta Kawaii
                   </h3>
                   <br>
-                  <p style="color:hotpink ; font-weight: bold;">$1.000</p>
+                  <p class="price" id="price">$1.000</p>
                   <br>
-                  <p style="font-weight: bold;">
+                  <p>
                      Diseño:
-                     <select style="text-align: center;">
+                     <select>
                         <option>Elige una opción</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -219,7 +219,7 @@
                   </p>
                   <br>
                   <p> <input id="value" type="number" min="1" max="20">
-                     Total a pagar: <q id="total" style="font-weight: bold;"></q>
+                     Total a pagar: <q id="total"></q>
                   </p>
                   <br>
                   <div class="buttonPage">
@@ -245,21 +245,21 @@
             <img class="logo" src="../img/logo.png" alt="logo" width="12%">
          </header>
          <br><br>
-         <h3  style="text-align:center;color: cornflowerblue;">¡Muchas gracias por su compra!</h3>
+         <h3 class="advertisement">¡Muchas gracias por su compra!</h3>
          <div class="detailsPay">
             <div class="descriptionPay">
-               <h3  style="text-align:center;font-size:18px;">
+               <h3>
                   Transferencia exitosa
                </h3>
                <br>
-               <i class="fas fa-check-circle fa-3x" style="color:rgb(247, 78, 157)"></i><br><br>
+               <i class="fas fa-check-circle fa-3x"></i><br><br>
                <p id="totalPayProducts"></p>
                <br><br>
                <p id="namePay"></p>
                <br><br>
                <p id="acount"></p>
                <br><br>
-               <p>Descripción:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lápiz Tinta Gel Mul Palta Kawaii</p>
+               <p id="descriptionProduct"></p>
                <br><br>
                <p id="unit"></p>
                <br>

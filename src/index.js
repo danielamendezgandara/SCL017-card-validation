@@ -11,6 +11,11 @@ const cvc = document.getElementById("cvc");
 const numberCard = document.getElementById("number");
 const aboutPage = document.getElementById("aboutPage");
 const buyProduct1 = document.getElementById("buy1");
+const buyProduct2 = document.getElementById("buy2");
+const buyProduct3 = document.getElementById("buy3");
+const selectImg = document.getElementById("selectImg");
+const titleProduct = document.getElementById("titleProduct");
+const price = document.getElementById("price");
 const buyDetails = document.getElementById("buydetails");
 const wrapper = document.getElementById("wrapper");
 const cancel = document.getElementById("cancel");
@@ -26,10 +31,12 @@ const totalPayProducts = document.getElementById("totalPayProducts");
 const unit = document.getElementById("unit");
 const namePay = document.getElementById("namePay");
 const acount = document.getElementById("acount");
+const descriptionProduct = document.getElementById("descriptionProduct");
 const finish = document.getElementById("finish");
 /*Declaración de variables*/
 let shelf;
 let sum;
+let priceProduct;
 let state = "";
 let cont = 0;
 
@@ -41,7 +48,9 @@ purchaseTicket.style.display = "none";
 ocult.style.display = "none";
 
 /*Declaración de eventos asociados a algunas constantes descritas anteriormente*/
-buyProduct1.addEventListener("click", detailsBuy);
+buyProduct1.addEventListener("click", detailsBuyProduct);
+buyProduct2.addEventListener("click", detailsBuyProduct);
+buyProduct3.addEventListener("click", detailsBuyProduct);
 cancel.addEventListener("click", cancelled);
 follow.addEventListener("click", buy);
 init.addEventListener("click", begin);
@@ -55,9 +64,39 @@ function buy() {
     buyDetails.style.display = "none";
 }
 
-function detailsBuy() {
-    aboutPage.style.display = "none";
-    buyDetails.style.display = "block";
+function detailsBuyProduct(e) {
+
+    let x = e.target.id;
+
+    if (x == "buy1") {
+
+        aboutPage.style.display = "none";
+        price.innerHTML = "$1.000";
+        selectImg.src = "../img/pencils.jpeg";
+        priceProduct = 1000;
+        buyDetails.style.display = "block";
+
+    }
+
+    if (x == "buy2") {
+
+        aboutPage.style.display = "none";
+        titleProduct.innerHTML = " Lápiz Portaminas Unicornio 0.5 mm";
+        price.innerHTML = "$1.500";
+        selectImg.src = "../img/pencilpony.jpeg";
+        priceProduct = 1500;
+        buyDetails.style.display = "block";
+
+    }
+
+    if (x == "buy3") {
+        aboutPage.style.display = "none";
+        titleProduct.innerHTML = "Lápiz Tinta Gel Negro Osito 3 diseños";
+        price.innerHTML = "$600";
+        selectImg.src = "../img/bearpencil.jpeg";
+        priceProduct = 600;
+        buyDetails.style.display = "block";
+    }
 }
 
 function cancelled() {
@@ -75,10 +114,11 @@ function begin() {
 
 function totalCancel() {
     wrapper.style.display = "none";
-    unit.innerHTML = "Unidades : " + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" + quantity.value;
-    totalPayProducts.innerHTML = "Monto :" + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;" + "$" + sum;
-    namePay.innerHTML = "Nombre :" + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" + name.value.toUpperCase();
-    acount.innerHTML = "Cuenta : " + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" + numberCard.value;
+    unit.innerHTML = "Unidades : " + "                  " + quantity.value;
+    totalPayProducts.innerHTML = "Monto :" + "                    " + "$" + sum;
+    namePay.innerHTML = "Nombre :" + "           " + name.value.toUpperCase();
+    acount.innerHTML = "Cuenta : " + "           " + numberCard.value;
+    descriptionProduct.innerHTML = "Descripción :" + " " + titleProduct.innerHTML;
     purchaseTicket.style.display = "block";
 }
 
@@ -89,7 +129,7 @@ function finishPay() {
 }
 
 quantity.onchange = function() {
-    sum = (quantity.value) * 1000;
+    sum = (quantity.value) * priceProduct;
     total.innerHTML = "$" + sum;
 }
 
@@ -117,7 +157,7 @@ name.onkeypress = function(e) {
 
 /*El evento desencadena que se evite ingresar letras a la casilla de númerode tarjeta en la pantalla de medio de pago*/
 numberCard.onkeypress = function(evt) {
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    let charCode = (evt.which) ? evt.which : evt.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
         return false;
     } else {
@@ -150,7 +190,7 @@ function validation() {
 
 /*El evento desencadena que se evite ingresar letras a la casilla CVC en la pantalla de medio de pago*/
 cvc.onkeypress = function(e) {
-    var charCode = (e.which) ? e.which : e.keyCode;
+    let charCode = (e.which) ? e.which : e.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
         return false;
     } else {
