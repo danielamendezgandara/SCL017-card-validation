@@ -241,11 +241,17 @@ elementos de método de pago*/
 
 .subscription h2 {
 	text-align: center;
-	margin-bottom: 8px;
+	margin-bottom: 1px;
 	color: #eb53ac;
-	padding: 3px 2px 25px;
+	padding: 0px 2px 25px;
 }
 
+.weypay{
+	width:45%;
+	margin-left: 70px;
+	margin-top: 0%;
+	margin-bottom: 6%;
+}
 
 /*Tercera página : Se llama a la class form.label para describir los títulos que describen el tipo de entrada a recibir*/
 
