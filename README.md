@@ -28,7 +28,7 @@ Para validar el número de tarjeta se aplica el algoritmo de Luhn.
   3. El prototipo inicial en papel es el siguiente:
 
      <img src="imgREADME/prototypeInitial1.jpg" width=50%  >
-     <img src="imgREADME/prototyprInitial2.PNG" width=50%  >
+     <img src="imgREADME/prototyprInitial2.jpg" width=50%  >
 
   4.  Feedback recibido de prototipos: Los prototipos iniciales no se podían explicar por sí solos,por lo que hubo que simplificar el diseño para que fuera entendible.Luego   se diseñó en Figma un prototipo el cual al adaptarlo en formato de página web las proporciones de cada elemento eran excesivamente grandes.Este último se modificó hasta hacerlo más entendible y práctico.
 
