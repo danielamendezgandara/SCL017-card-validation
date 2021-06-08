@@ -9,6 +9,7 @@ const check = document.getElementById("check");
 const name = document.getElementById("name");
 const cvc = document.getElementById("cvc");
 const numberCard = document.getElementById("number");
+const logoCreditCard = document.getElementById("logoCreditCard");
 const aboutPage = document.getElementById("aboutPage");
 const buyProduct1 = document.getElementById("buy1");
 const buyProduct2 = document.getElementById("buy2");
@@ -33,6 +34,7 @@ const namePay = document.getElementById("namePay");
 const acount = document.getElementById("acount");
 const descriptionProduct = document.getElementById("descriptionProduct");
 const finish = document.getElementById("finish");
+const print= document.getElementById("print");
 /*Declaración de variables*/
 let shelf;
 let sum;
@@ -56,6 +58,7 @@ follow.addEventListener("click", buy);
 init.addEventListener("click", begin);
 totalPay.addEventListener("click", totalCancel);
 finish.addEventListener("click", finishPay);
+print.addEventListener("click",voucherPrint);
 
 /*Funciones asociadas a los eventos declarados anteriormente*/
 function buy() {
@@ -72,7 +75,7 @@ function detailsBuyProduct(e) {
 
         aboutPage.style.display = "none";
         price.innerHTML = "$1.000";
-        selectImg.src = "pencils.jpeg";
+        selectImg.src = "../img/pencils.jpeg";
         priceProduct = 1000;
         buyDetails.style.display = "block";
 
@@ -83,7 +86,7 @@ function detailsBuyProduct(e) {
         aboutPage.style.display = "none";
         titleProduct.innerHTML = " Lápiz Portaminas Unicornio 0.5 mm";
         price.innerHTML = "$1.500";
-        selectImg.src = "pencilpony.jpeg";
+        selectImg.src = "../img/pencilpony.jpeg";
         priceProduct = 1500;
         buyDetails.style.display = "block";
 
@@ -93,7 +96,7 @@ function detailsBuyProduct(e) {
         aboutPage.style.display = "none";
         titleProduct.innerHTML = "Lápiz Tinta Gel Negro Osito 3 diseños";
         price.innerHTML = "$600";
-        selectImg.src = "bearpencil.jpeg";
+        selectImg.src = "../img/bearpencil.jpeg";
         priceProduct = 600;
         buyDetails.style.display = "block";
     }
@@ -126,6 +129,10 @@ function finishPay() {
     purchaseTicket.style.display = "none";
     aboutPage.style.display = "block";
     location.reload();
+}
+
+function voucherPrint(){
+    window.print();
 }
 
 quantity.onchange = function() {
@@ -163,6 +170,17 @@ numberCard.onkeypress = function(evt) {
     } else {
         numberCard.onkeyup = function(e) {
             shelf = e.currentTarget.value;
+            if (shelf[0] == 4 ){
+                logoCreditCard.src="../img/visa.png";
+            }else if ( shelf [0] == 5){
+                logoCreditCard.src="../img/mastercard.png";
+            }else if (shelf[0] == 3){
+                logoCreditCard.src="../img/americanexpress.jpg";
+            }else if (shelf[0]== 6){
+                logoCreditCard.src="../img/discovercard.png";
+            }else if (shelf[0]== 1){
+                logoCreditCard.src="../img/redcompra.png";
+            }
             state = state + shelf.charAt(cont);
             numberCard.value = validator.maskify(numberCard.value);
             cont = cont + 1;
