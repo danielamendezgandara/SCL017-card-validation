@@ -75,7 +75,7 @@ function detailsBuyProduct(e) {
 
         aboutPage.style.display = "none";
         price.innerHTML = "$1.000";
-        selectImg.src = "../img/pencils.jpeg";
+        selectImg.src = "pencils.jpeg";
         priceProduct = 1000;
         buyDetails.style.display = "block";
 
@@ -86,7 +86,7 @@ function detailsBuyProduct(e) {
         aboutPage.style.display = "none";
         titleProduct.innerHTML = " Lápiz Portaminas Unicornio 0.5 mm";
         price.innerHTML = "$1.500";
-        selectImg.src = "../img/pencilpony.jpeg";
+        selectImg.src = "pencilpony.jpeg";
         priceProduct = 1500;
         buyDetails.style.display = "block";
 
@@ -96,7 +96,7 @@ function detailsBuyProduct(e) {
         aboutPage.style.display = "none";
         titleProduct.innerHTML = "Lápiz Tinta Gel Negro Osito 3 diseños";
         price.innerHTML = "$600";
-        selectImg.src = "../img/bearpencil.jpeg";
+        selectImg.src = "bearpencil.jpeg";
         priceProduct = 600;
         buyDetails.style.display = "block";
     }
@@ -171,15 +171,15 @@ numberCard.onkeypress = function(evt) {
         numberCard.onkeyup = function(e) {
             shelf = e.currentTarget.value;
             if (shelf[0] == 4 ){
-                logoCreditCard.src="../img/visa.png";
+                logoCreditCard.src="visa.png";
             }else if ( shelf [0] == 5){
-                logoCreditCard.src="../img/mastercard.png";
+                logoCreditCard.src="mastercard.png";
             }else if (shelf[0] == 3){
-                logoCreditCard.src="../img/americanexpress.jpg";
+                logoCreditCard.src="americanexpress.jpg";
             }else if (shelf[0]== 6){
-                logoCreditCard.src="../img/discovercard.png";
+                logoCreditCard.src="discovercard.png";
             }else if (shelf[0]== 1){
-                logoCreditCard.src="../img/redcompra.png";
+                logoCreditCard.src="redcompra.png";
             }
             state = state + shelf.charAt(cont);
             numberCard.value = validator.maskify(numberCard.value);
