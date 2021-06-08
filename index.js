@@ -203,6 +203,8 @@ function validation() {
     if (text == false) {
         popUpWindow.style.display = "block";
         numberCard.value = "";
+        logoCreditCard.src="";
+        iconTarjet.className="";
         state = "";
     } else {
         message.innerHTML = "Su tarjeta es válida. Puede continuar con su compra."
