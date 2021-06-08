@@ -187,7 +187,15 @@ li:hover {
 	font-weight: bold;
 }
 
-
+.logotarjet{
+	margin-left: 40px;
+	margin-top: 0%;
+	margin-bottom: -1.5%;
+}
+.paymentMethod i{
+	margin-left: 40px;
+    color: rgb(49, 132, 184);
+}
 /*Segunda página: Se llama a la class photoDetails para definir el ancho y largo de la imagen */
 
 .photoDetails {

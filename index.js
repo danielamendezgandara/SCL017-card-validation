@@ -15,6 +15,7 @@ const buyProduct1 = document.getElementById("buy1");
 const buyProduct2 = document.getElementById("buy2");
 const buyProduct3 = document.getElementById("buy3");
 const selectImg = document.getElementById("selectImg");
+const iconTarjet = document.getElementById("iconTarjet");
 const titleProduct = document.getElementById("titleProduct");
 const price = document.getElementById("price");
 const buyDetails = document.getElementById("buydetails");
@@ -171,15 +172,22 @@ numberCard.onkeypress = function(evt) {
         numberCard.onkeyup = function(e) {
             shelf = e.currentTarget.value;
             if (shelf[0] == 4 ){
-                logoCreditCard.src="visa.png";
+                logoCreditCard.src="";
+                iconTarjet.className="fab fa-cc-visa fa-2x";
+                iconTarjet.style.color="navy";
             }else if ( shelf [0] == 5){
                 logoCreditCard.src="mastercard.png";
+                iconTarjet.className="";
             }else if (shelf[0] == 3){
-                logoCreditCard.src="americanexpress.jpg";
+                logoCreditCard.src="";
+                iconTarjet.className= "fab fa-cc-amex fa-2x";
+                iconTarjet.style.color="royalblue";
             }else if (shelf[0]== 6){
                 logoCreditCard.src="discovercard.png";
+                iconTarjet.className="";
             }else if (shelf[0]== 1){
                 logoCreditCard.src="redcompra.png";
+                iconTarjet.className="";
             }
             state = state + shelf.charAt(cont);
             numberCard.value = validator.maskify(numberCard.value);
