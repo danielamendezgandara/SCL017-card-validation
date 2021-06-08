@@ -182,7 +182,6 @@ numberCard.onkeypress = function (evt) {
 		return false;
 	} else {
 		numberCard.onkeyup = function (e) {
-			/* shelf = e.currentTarget.value;*/
 			let shelf = e.target.value;
 			let remove = 0;
 			let charCode1 = e.key;
@@ -194,7 +193,6 @@ numberCard.onkeypress = function (evt) {
 				} else {
 					state = state.slice(0, -remove);
 				}
-
 			}
 			if (numbers.indexOf(charCode1) == -1 || charCode1 == "Backspace") {
 				return false;
