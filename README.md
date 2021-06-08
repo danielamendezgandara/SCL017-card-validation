@@ -23,14 +23,14 @@ Para validar el número de tarjeta se aplica el algoritmo de Luhn.
 ## 3. Investigación UX
 
 
-  1. Las usuarios o usuarios son personas interesadas en adquirir productos de papelería de temática kawaii.
+  1. Las usuarias o usuarios son personas interesadas en adquirir productos de papelería de temática kawaii.
   2. El producto ofrecido satisface la necesidad de comprar objetos de temática kawaii que sean bonitos y útiles.
   3. El prototipo inicial en papel es el siguiente:
 
      <img src="imgREADME/prototypeInitial1.jpg" width=50%  >
      <img src="imgREADME/prototyprInitial2.jpg" width=50%  >
 
-  4.  Feedback recibido de prototipos: Los prototipos iniciales no se podían explicar por sí solos,por lo que hubo que simplificar el diseño para que fuera entendible.Luego   se diseñó en Figma un prototipo el cual al adaptarlo en formato de página web las proporciones de cada elemento eran excesivamente grandes.Este último se modificó hasta hacerlo más entendible y práctico.
+  4.  Feedback recibido de prototipos: Los prototipos iniciales no se podían explicar por sí solos,por lo que hubo que simplificar el diseño para que fuera entendible.Luego  se diseñó en Figma un prototipo el cual al adaptarlo en formato de página web las proporciones de cada elemento eran excesivamente grandes.Este último se modificó hasta hacerlo más entendible y práctico.
 
 ## 4. Objetivos propuestos al inciar este proyecto
 
